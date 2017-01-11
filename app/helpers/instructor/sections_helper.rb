@@ -1,2 +1,0 @@
-module Instructor::SectionsHelper
-end
