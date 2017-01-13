@@ -11,8 +11,9 @@ class LessonsController < ApplicationController
 
   private
     def require_authorized_for_current_lesson
-      if current_lesson.section.course.id != current_user.enrollments.course.id
-        render text: "Unauthorized", status: :unauthorized
+      if !current_user.enrolled_in?(current_lesson.section.course) && current_lesson.section.course.user != current_user
+        # render text: "Unauthorized", status: :unauthorized
+        redirect_to course_path(current_lesson.section.course), alert: 'You are not authorized to do that'
       end
     end
 
