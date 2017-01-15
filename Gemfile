@@ -36,6 +36,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3.1'
 gem 'carrierwave-aws'
 gem 'stripe'
+gem 'ranked-model'
 
 
 # Use ActiveModel has_secure_password
