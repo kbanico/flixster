@@ -47,7 +47,7 @@ class Instructor::SectionsController < ApplicationController
 
   def current_section
 
-    @current_section ||= Section.find(params[:id)
+    @current_section ||= Section.find(params[:id])
   end
 
   def section_params
